@@ -1,6 +1,6 @@
 # Commons Ansible Role
 
-An Ansible Role for configuring you ubuntu linux.
+An Ansible Role for configuring Debian like systems.
 
 ## Installation
 

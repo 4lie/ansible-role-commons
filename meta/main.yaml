@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: commons
   author: Rashad Ansari
-  description: Commons Configuration for Debian-like Systems
+  description: Commons Configurations for Debian-like Systems
   company: 4lie
   min_ansible_version: 2.6
   platforms:
