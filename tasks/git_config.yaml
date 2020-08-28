@@ -1,0 +1,6 @@
+- name: Manage Global Git Config
+  git_config:
+    name: "{{ item.key }}"
+    scope: global
+    value: "{{ item.value }}"
+  with_dict: "{{ git_config }}"

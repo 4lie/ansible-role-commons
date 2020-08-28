@@ -1,0 +1,8 @@
+#!/bin/sh
+# {{ ansible_managed }}
+
+{% if rclocal_config is defined %}
+{% for item in rclocal_config %}
+{{ item }}
+{% endfor %}
+{% endif %}

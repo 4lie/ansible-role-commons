@@ -1,0 +1,4 @@
+- name: Update ans Upgrade apt Packages
+  apt:
+    upgrade: yes
+    update_cache: yes

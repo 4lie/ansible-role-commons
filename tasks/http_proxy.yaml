@@ -1,0 +1,5 @@
+- name: Add HTTP Proxy Variables
+  template:
+    src: http_proxy.j2
+    dest: /etc/profile.d/http_proxy.sh
+    mode: 0644

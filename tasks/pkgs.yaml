@@ -1,0 +1,15 @@
+- name: Install Default Packages
+  package:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ default_pkgs }}"
+  when: default_pkgs is defined
+
+- name: Install Basic Packages
+  package:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ basic_pkgs }}"
+  when: basic_pkgs is defined

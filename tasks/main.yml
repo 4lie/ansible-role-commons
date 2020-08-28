@@ -1,0 +1,42 @@
+- include_tasks: pkgs.yaml
+  when: default_pkgs is defined or basic_pkgs is defined
+  tags: ["packages"]
+
+- include_tasks: git_config.yaml
+  when: git_config is defined
+  tags: ["git-config"]
+
+- include_tasks: limits.yaml
+  when: limits_config is defined
+  tags: ["limits"]
+
+- include_tasks: modprobe.yaml
+  when: basic_modprobe is defined
+  tags: ["modules"]
+
+- include_tasks: rc.local.yaml
+  when: rclocal_config is defined
+  tags: ["rc-local"]
+
+- include_tasks: resolv.yaml
+  tags: ["resolv-conf"]
+
+- include_tasks: sysctl.yaml
+  when: sysctl_config is defined
+  tags: ["sysctl"]
+
+- include_tasks: timezone.yaml
+  when: timezone is defined
+  tags: ["timezone"]
+
+- include_tasks: sysfs.yaml
+  when: sysfs_config is defined
+  tags: ["sysfs"]
+
+- include_tasks: http_proxy.yaml
+  when: http_proxy is defined
+  tags: ["http-proxy"]
+
+- include_tasks: apt.yaml
+  when: apt_update == 'true'
+  tags: ["apt", 'update']
